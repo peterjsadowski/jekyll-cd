@@ -11,8 +11,8 @@ if [ -d "docs" ]; then
 fi
 
 echo '🔨 Build site'
-JEKYLL_ENV=production
-bundle exec jekyll build -d docs
+#JEKYLL_ENV=production
+bundle exec jekyll build -d docs --config _config_production.yml
 
 echo '🧪 Deploy build'
 git config user.name "${GITHUB_ACTOR}"
