@@ -11,6 +11,7 @@ if [ -d "docs" ]; then
 fi
 
 echo '🔨 Build site'
+JEKYLL_ENV=production
 bundle exec jekyll build -d docs
 
 echo '🧪 Deploy build'
